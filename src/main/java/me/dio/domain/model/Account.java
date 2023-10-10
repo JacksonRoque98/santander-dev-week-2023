@@ -16,12 +16,12 @@ public class Account {
     private String number;
     private String agency;
 
-    //scale 11 numeros inteiros e precision 2 decimais
-    @Column(scale = 13, precision = 2)
+    //precision 11 numeros inteiros e scale 2 decimais
+    @Column(precision = 13, scale = 2)
     private BigDecimal balance;
 
-    //scale 11 numeros inteiros e 2 decimais
-    @Column(name = "additional_limit", scale = 13, precision = 2)
+    //precision 11 numeros inteiros e scale 2 decimais
+    @Column(name = "additional_limit", precision = 11, scale = 2)
     private BigDecimal limit;
 
     public Long getId() {

@@ -15,8 +15,8 @@ public class Card {
     @Column(unique = true)
     private String number;
 
-    //scale 11 numeros inteiros e precision 2 decimais
-    @Column(name = "additional_limit", scale = 13, precision = 2)
+    //precision 11 numeros inteiros e scale 2 decimais
+    @Column(name = "additional_limit", precision = 13, scale = 2)
     private BigDecimal limit;
 
     public Long getId() {
