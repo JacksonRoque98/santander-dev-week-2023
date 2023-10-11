@@ -25,6 +25,13 @@ dependencies {
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+//configuração para subir a aplicação na nuvem.
+//Declarar qual classe main.
+tasks.jar{
+	manifest{
+		attributes["Main-class"] = "me.dio.Application"
+	}
+}
 
 tasks.named('test') {
 	useJUnitPlatform()
