@@ -1,8 +1,6 @@
 package me.dio.domain.model;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.Cascade;
-
 import java.util.List;
 
 @Entity(name = "tb_user")

@@ -1,10 +1,8 @@
-package me.dio.domain.controller;
+package me.dio.controller;
 
 import me.dio.domain.model.User;
-import me.dio.domain.service.UserService;
-import org.springframework.http.RequestEntity;
+import me.dio.service.UserService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.ServletRequestBindingException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -14,7 +12,7 @@ import java.net.URI;
 //Quando acessar a aplicação/users irá acessar as funcionalidades do UserService
 @RequestMapping("/users")
 public class UserController {
-    private UserService userService;
+    private final UserService userService;
     //Criamos o construtor do UserController para injetar todas as depedencias do UserService no Controller
     public UserController(UserService userService){
         this.userService = userService;
@@ -36,7 +34,7 @@ public class UserController {
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")
                 //build and expande o usuario criado
-                .buildAndExpand(userCreated)
+                .buildAndExpand(userCreated.getId())
                 //para a Uri
                 .toUri();
         //Retorna a localização criada(id) e os dados do usuario
