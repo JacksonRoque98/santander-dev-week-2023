@@ -29,7 +29,7 @@ dependencies {
 //Declarar qual classe main.
 tasks.jar{
 	manifest{
-		attributes["Main-class"] = "me.dio.Application"
+		attributes["Main-class"] = "estacionamento.EstacionamentoApplication"
 	}
 }
 
