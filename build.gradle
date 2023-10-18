@@ -27,9 +27,9 @@ dependencies {
 }
 //configuração para subir a aplicação na nuvem.
 //Declarar qual classe main.
-tasks.jar{
-	manifest{
-		attributes["Main-class"] = "estacionamento.EstacionamentoApplication"
+tasks.jar {
+	manifest {
+		attributes["Main-Class"] = "estacionamento.EstacionamentoApplication"
 	}
 }
 
