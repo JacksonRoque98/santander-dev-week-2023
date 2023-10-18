@@ -26,9 +26,6 @@ public class UserServiceImpl implements UserService {
     }
     @Transactional
     public User create(User userCreate) {
-        if(userRepository.existsByCpf(userCreate.getCpf())){
-            throw new BusinessException("This CPF alredy exists.");
-        }
         return this.userRepository.save(userCreate);
     }
     @Transactional
